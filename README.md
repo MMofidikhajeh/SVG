@@ -1,22 +1,12 @@
 # Semantic Vision Graphormer (SVG)
-
 **Structured Inductive Biases via Spatial, Centrality, and Semantic Encodings for Vision Transformers**
 
-*Master's Thesis Research | Tarbiat Modares University*  
-*Author: Mohammad Mofidikhajeh | Advisor: Prof. Mansoor Rezghi*
+## Overview
+Semantic Vision Graphormer (SVG) is a novel Transformer framework that injects explicit, lightweight graph-theoretic inductive biases directly into self-attention mechanisms. By treating image patches as nodes in a dual-graph structure, SVG balances geometric and semantic reasoning hierarchically. The architecture is designed to overcome the "data hunger" of standard Vision Transformers (ViTs), achieving superior performance under constrained data regimes without heavy computational overhead.
 
-## 📖 Overview
-Standard Vision Transformers (ViTs) treat images as unstructured sequences of patches, forcing the model to implicitly learn spatial and structural relationships from massive amounts of data. **Semantic Vision Graphormer (SVG)** overcomes this "data hunger" by injecting explicit, lightweight graph-theoretic inductive biases directly into the self-attention mechanism. 
-
-By formulating structural biases to be mathematically decoupled from Euclidean grid topologies, SVG not only achieves superior data efficiency in computer vision tasks but also establishes a parameterized framework for future extension to non-Euclidean manifolds (e.g., molecular graphs).
-
-## ✨ Key Contributions
-- **Explicit Structural Biases:** Injects spatial shortest-path distances, node centrality, and content-based semantic similarity directly into attention logits.
-- **Parameter Efficiency:** Achieves a **4.01% accuracy improvement** over standard ViT baselines under constrained data regimes, adding **<15,000 parameters** and negligible MAC overhead.
-- **Layer-Adaptive Scaling:** Introduces a dynamic scaling mechanism to modulate prior strength, allowing the model to hierarchically balance geometric and semantic reasoning across Transformer blocks.
-- **Domain-Agnostic Formulation:** The core mathematical machinery is strictly decoupled from fixed lattices, providing a theoretical bridge to irregular, non-Euclidean graph representation learning.
-
-## 🛠️ Requirements
-The codebase is implemented in pure PyTorch.
-```bash
-pip install torch torchvision numpy pandas matplotlib scikit-learn
+## Key Highlights
+* **Explicit Structural Priors:** Integrates spatial shortest-path, node centrality, and content-based semantic similarity directly into attention logits.
+* **High Parameter Efficiency:** Adds **<15,000 parameters** and negligible MAC overhead compared to standard ViT baselines.
+* **Constrained Data Performance:** Achieves a **4.01% accuracy improvement** over baseline ViTs in low-data regimes.
+* **Layer-Adaptive Scaling:** Dynamically modulates prior strength across network depth, allowing the model to hierarchically balance geometric and semantic reasoning.
+* **Domain-Agnostic Mathematics:** While validated on Euclidean vision grids, the core mathematical formulation of the dual-graph bias injection is decoupled from grid topologies, providing a foundation for future extension to non-Euclidean manifolds (e.g., molecular or chemical graphs).
