@@ -1,7 +1,7 @@
 # Seeing Images as Graphs for Structured Visual Representation Learning
 ### Semantic Vision Graphormer (SVG)
 
-**Author:** Mohammad Mofidikhajeh | **Term:** Spring 2026
+**Author:** Mohammad Mofidikhajeh | **Term:** Fall 2026
 
 ---
 
@@ -34,17 +34,19 @@ SVG modifies the standard self-attention mechanism by adding three explicit, int
 ---
 
 ## 📊 Results
-Evaluated on **CIFAR-10** (Image Size: 32x32). SVG matches the parameter footprint of strong baselines while significantly outperforming them.
+SVG matches the parameter footprint of strong baselines while significantly outperforming them. (Run for 300 epochs)
 
-| Model | Accuracy (%) | Epochs | Parameters |
+**CIFAR-10** (Image Size: 32x32)
+| Model | Accuracy (%) | Parameters |
 | :--- | :---: | :---: | :---: |
-| **SVG (Ours)** | **94.68** | 479 | ~5.4M |
-| SVG w/o Semantic Bias | 94.51 | 492 | ~5.4M |
-| SVG w/o Semantic & Spatial | 92.95 | 500 | ~5.4M |
-| Swin Transformer (timm) | ~92.50 | - | ~5.4M |
-| ViT (timm) | ~90.50 | - | ~5.4M |
-
-*(Note: Baseline numbers are approximate representations of the ~2.18% and ~4% margins noted in the draft).*
+| **SVG (Ours)** | **93.52** | ~5.4M |
+| SVG w/o Semantic Bias | 93.34 | ~5.4M |
+| SVG w/o Spatial | 91.94 | ~5.4M |
+| SVG w/o Centrality | 93.66 | ~5.4M |
+| SVG w/o Semantic & Spatial | 91.95 | ~5.4M |
+| SVG w/o Semantic & Centrality | 93.36 | ~5.4M |
+| SVG w/o Spatial & Centrality | 92.08 | ~5.4M |
+| ViT base(timm) | 91.57 | ~5.4M |
 
 ---
 
@@ -54,7 +56,7 @@ The model was trained using the following configuration to ensure fair compariso
 * **Optimizer:** AdamW (`lr=1e-3`, `weight_decay=0.05`)
 * **Batch Size:** 128
 * **LR Schedule:** Cosine Annealing with 5-epoch linear warmup
-* **Epochs:** ~500
+* **Epochs:** 300
 * **Loss Function:** CrossEntropy with Label Smoothing (0.1) and Mixup/CutMix handling
 * **Precision:** `torch.bfloat16`
 * **Data Augmentation:**
@@ -66,16 +68,5 @@ The model was trained using the following configuration to ensure fair compariso
 ---
 
 ## 🚀 Installation & Requirements
-*(Update this section based on your actual environment setup)*
+*Uses Regular Deep Learning environment. [to be updated]*
 
-```bash
-# Clone the repository
-git clone https://github.com/yourusername/svg-vision.git
-cd svg-vision
-
-# Create a virtual environment
-python -m venv svg_env
-source svg_env/bin/activate  # On Windows: svg_env\Scripts\activate
-
-# Install dependencies
-pip install -r requirements.txt
