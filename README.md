@@ -14,6 +14,8 @@ Vision Transformers (ViTs) achieve strong performance by processing images as un
 
 By injecting lightweight, graph-theoretic inductive biases directly into the self-attention logits, SVG enhances representation learning with negligible computational overhead.
 
+*I have provided the latest draft of the paper that is to be published within the month to arXiv and the code for the model in this repository. Feel free to review them.*
+
 ---
 
 ## ✨ Key Features & Contributions
