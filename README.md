@@ -40,15 +40,25 @@ SVG matches the parameter footprint of strong baselines while significantly outp
 
 **CIFAR-10** (Image Size: 32x32)
 | Model | Accuracy (%) | Parameters |
+
 | :--- | :---: | :---: | :---: |
+
 | **SVG (Ours)** | **93.52** | ~5.4M |
+
 | SVG w/o Semantic Bias | 93.34 | ~5.4M |
+
 | SVG w/o Spatial | 91.94 | ~5.4M |
+
 | SVG w/o Centrality | 93.66 | ~5.4M |
+
 | SVG w/o Semantic & Spatial | 91.95 | ~5.4M |
+
 | SVG w/o Semantic & Centrality | 93.36 | ~5.4M |
+
 | SVG w/o Spatial & Centrality | 92.08 | ~5.4M |
+
 | ViT base(timm) | 91.57 | ~5.4M |
+
 
 ---
 
