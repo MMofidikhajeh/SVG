@@ -42,40 +42,28 @@ SVG matches the parameter footprint of strong baselines while significantly outp
 
 **CIFAR-10** (Image Size: 32x32)
 
----
-
 | Model | Accuracy (%) | Parameters |
-
-| :--- | :---: | :---: | :---: |
-
+| :--- | :---: | :---: |
 | **SVG (Ours)** | **93.52** | ~5.4M |
-
-| ViT base(timm) | 91.57 | ~5.4M |
-
----
+| ViT base (timm) | 91.57 | ~5.4M |
 
 **Tiny Imagenet** (Image Size: 64x64)
+
 | Model | Accuracy (%) | Parameters |
-
-| :--- | :---: | :---: | :---: |
-
+| :--- | :---: | :---: |
 | **SVG** | **61.59** | ~5.4M |
-
-| ViT base(timm) | 58.15 | ~5.4M |
+| ViT base (timm) | 58.15 | ~5.4M |
 
 ---
 
 ### Experiment 2: Fine-tuning pre-trained ViT on fine-grained datasets.
 
 **Oxford Pets** (Image Size: 224x224)
+
 | Method | Accuracy (%) | Trainable Parameters |
-
-| :--- | :---: | :---: | :---: |
-
-| Frozen ViT + **SVG Biases** (Ours) | **81.36** | 7,184 (Head + SVG)|
-
-| Frozen ViT (Linear Probing) | 78.20 | 7.141 (Head only) |
-
+| :--- | :---: | :---: |
+| Frozen ViT + **SVG Biases** (Ours) | **81.36** | 7,184 (Head + SVG) |
+| Frozen ViT (Linear Probing) | 78.20 | 7,141 (Head only) |
 
 ## 🛠️ Training Setup & Hyperparameters
 The model was trained using the following configuration to ensure fair comparison and optimal convergence:
