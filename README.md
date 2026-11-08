@@ -41,6 +41,7 @@ SVG matches the parameter footprint of strong baselines while significantly outp
 ### Experiment 1: Training from scratch on small datasets.
 
 **CIFAR-10** (Image Size: 32x32)
+---
 | Model | Accuracy (%) | Parameters |
 
 | :--- | :---: | :---: | :---: |
@@ -48,7 +49,6 @@ SVG matches the parameter footprint of strong baselines while significantly outp
 | **SVG (Ours)** | **93.52** | ~5.4M |
 
 | ViT base(timm) | 91.57 | ~5.4M |
-
 ---
 
 **Tiny Imagenet** (Image Size: 64x64)
