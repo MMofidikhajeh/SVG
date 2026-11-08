@@ -1,6 +1,6 @@
 # Seeing Images as Graphs for Structured Visual Representation Learning
 ### Semantic Vision Graphormer (SVG)
-
+![Alt text](https://github.com/MMofidikhajeh/SVG/blob/a1927c027867d9822685dd6bc627018333ad67c7/blob/SVG.png)
 **Author:** Mohammad Mofidikhajeh | **Term:** Fall 2026
 
 ---
