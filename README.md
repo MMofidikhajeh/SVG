@@ -48,6 +48,7 @@ SVG matches the parameter footprint of strong baselines while significantly outp
 | **SVG (Ours)** | **93.52** | ~5.4M |
 
 | ViT base(timm) | 91.57 | ~5.4M |
+
 ---
 
 **Tiny Imagenet** (Image Size: 64x64)
@@ -58,10 +59,12 @@ SVG matches the parameter footprint of strong baselines while significantly outp
 | **SVG** | **61.59** | ~5.4M |
 
 | ViT base(timm) | 58.15 | ~5.4M |
+
 ---
+
 ### Experiment 2: Fine-tuning pre-trained ViT on fine-grained datasets.
 
-**Tiny Imagenet** (Image Size: 224x224)
+**Oxford Pets** (Image Size: 224x224)
 | Method | Accuracy (%) | Trainable Parameters |
 
 | :--- | :---: | :---: | :---: |
