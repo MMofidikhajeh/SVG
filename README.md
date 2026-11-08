@@ -38,6 +38,8 @@ SVG modifies the standard self-attention mechanism by adding three explicit, int
 ## 📊 Results
 SVG matches the parameter footprint of strong baselines while significantly outperforming them. (Run for 300 epochs)
 
+### Experiment 1: Training from scratch on small datasets.
+
 **CIFAR-10** (Image Size: 32x32)
 | Model | Accuracy (%) | Parameters |
 
@@ -45,22 +47,29 @@ SVG matches the parameter footprint of strong baselines while significantly outp
 
 | **SVG (Ours)** | **93.52** | ~5.4M |
 
-| SVG w/o Semantic Bias | 93.34 | ~5.4M |
-
-| SVG w/o Spatial | 91.94 | ~5.4M |
-
-| SVG w/o Centrality | 93.66 | ~5.4M |
-
-| SVG w/o Semantic & Spatial | 91.95 | ~5.4M |
-
-| SVG w/o Semantic & Centrality | 93.36 | ~5.4M |
-
-| SVG w/o Spatial & Centrality | 92.08 | ~5.4M |
-
 | ViT base(timm) | 91.57 | ~5.4M |
-
-
 ---
+
+**Tiny Imagenet** (Image Size: 64x64)
+| Model | Accuracy (%) | Parameters |
+
+| :--- | :---: | :---: | :---: |
+
+| **SVG** | **61.59** | ~5.4M |
+
+| ViT base(timm) | 58.15 | ~5.4M |
+---
+### Experiment 2: Fine-tuning pre-trained ViT on fine-grained datasets.
+
+**Tiny Imagenet** (Image Size: 224x224)
+| Method | Accuracy (%) | Trainable Parameters |
+
+| :--- | :---: | :---: | :---: |
+
+| Frozen ViT + **SVG Biases** (Ours) | **81.36** | 7,184 (Head + SVG)|
+
+| Frozen ViT (Linear Probing) | 78.20 | 7.141 (Head only) |
+
 
 ## 🛠️ Training Setup & Hyperparameters
 The model was trained using the following configuration to ensure fair comparison and optimal convergence:
