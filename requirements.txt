@@ -1,0 +1,49 @@
+# ==========================================
+# Core Deep Learning Frameworks
+# ==========================================
+# Note: It is highly recommended to install PyTorch first via the official 
+# index URL (e.g., pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121)
+# before running pip install -r requirements.txt to ensure the correct CUDA version.
+torch==2.5.1
+torchvision==0.20.1
+torchaudio==2.5.1
+
+# ==========================================
+# HuggingFace & Model Ecosystem
+# ==========================================
+timm==1.0.28
+transformers==4.46.3
+peft==0.21.2
+accelerate==1.15.0
+safetensors==0.8.0
+tokenizers==0.20.3
+datasets==5.1.0
+
+# ==========================================
+# Computer Vision & Image Processing
+# ==========================================
+# Using headless OpenCV is recommended for server/cluster environments
+opencv-python-headless==5.0.0.93
+albumentations==2.0.8
+pillow==12.3.0
+grad-cam==1.5.7
+lpips==0.1.4
+ttach==0.0.3
+
+# ==========================================
+# Data Science, Analysis & Plotting
+# ==========================================
+numpy==2.2.6
+pandas==2.3.3
+scikit-learn==1.7.2
+scipy==1.15.3
+matplotlib==3.10.9
+seaborn==0.13.2
+torchmetrics==1.9.0
+
+# ==========================================
+# Utilities & Logging
+# ==========================================
+tqdm==4.70.1
+PyYAML==6.0.3
+tabulate==0.10.0
