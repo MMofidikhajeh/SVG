@@ -83,5 +83,34 @@ The model was trained using the following configuration to ensure fair compariso
 ---
 
 ## 🚀 Installation & Requirements
-*Uses Regular Deep Learning environment. [to be updated]*
 
+This project is built using standard deep learning tools. We recommend using a conda environment to manage dependencies.
+
+### 1. Prerequisites
+- Python 3.8 or higher
+- CUDA 11.8 or higher (for GPU acceleration)
+
+### 2. Environment Setup
+Create and activate a new conda environment:
+```bash
+conda create -n svg_env python=3.9 -y
+conda activate svg_env
+```
+
+### 3. Install Dependencies
+Install PyTorch and other required packages by running:
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Dataset Preparation
+The code expects datasets to be organized in a standard format. You can either let the script download them automatically or place them in your data directory:
+- **CIFAR-10**: Automatically downloaded via `torchvision`.
+- **Tiny ImageNet**: Download from [Stanford](http://cs231n.stanford.edu/tiny-imagenet-200.zip).
+- **Oxford-IIIT Pets**: Automatically downloaded via `torchvision.datasets.OxfordIIITPet`.
+
+### 5. Verify Installation
+Run a quick sanity check to ensure everything is set up correctly:
+```bash
+python -c "import torch; import timm; print(f'PyTorch: {torch.__version__} | CUDA Available: {torch.cuda.is_available()}')"
+```
